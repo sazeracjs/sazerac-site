@@ -1,0 +1,14 @@
+<ul id="links" class="links-list">
+    <% for(var i in site.data.links) { %>
+    <li>
+        <a href="<%= site.data.links[i].href %>">
+        <% if (site.data.links[i].icon) { %>
+            <i class="<%= site.data.links[i].icon %>"></i>
+        <% } %>
+        <% if (site.data.links[i].text) { %>
+            <span><%= site.data.links[i].text %></span>
+        <% } %>
+        </a>
+    </li>
+    <% } %>
+</ul>

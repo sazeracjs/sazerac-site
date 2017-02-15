@@ -1,0 +1,18 @@
+<ul id="share-links" class="links-list">
+    <li class="share-text">Share:</li>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=<%- encodeURIComponent(config.title + ' - ' + config.description) %>&url=<%= config.url %>">
+        <i class="fa fa-twitter fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=<%- encodeURIComponent(config.url) %>">
+        <i class="fa fa-facebook fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://plus.google.com/share?url=<%- encodeURIComponent(config.url) %>">
+        <i class="fa fa-google-plus fa-lg"></i>
+    </a>
+    </li>
+</ul>

@@ -1,0 +1,19 @@
+<div class="nav-dropdown-container">
+  <a class="nav-link"><span id="version"><%= page.path.split('/')[0] %></span></a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+      <ul>
+        <%
+          site.pages.reduce(function(vers, p) {
+            var v = p.path.split('/')[0];
+            if (vers.indexOf(v) === -1) {
+              vers.push(v)
+            }
+            return vers;
+          }, []).forEach(function(v) { %>
+          <li><a href="/<%= v %>/"><%= v %></a></li>
+        <% }) %>
+      </ul>
+    </li>
+  </ul>
+</div>
