@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sazerac</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://sazeracjs.com/"/>
+  <updated>2017-02-27T17:06:58.331Z</updated>
+  <id>http://sazeracjs.com/</id>
+  
+  <author>
+    <name>Mike Calvanese</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>post</title>
+    <link href="http://sazeracjs.com/2017/02/15/first/"/>
+    <id>http://sazeracjs.com/2017/02/15/first/</id>
+    <published>2017-02-15T13:15:02.000Z</published>
+    <updated>2017-02-27T17:06:58.331Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
