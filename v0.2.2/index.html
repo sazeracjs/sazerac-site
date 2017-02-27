@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Guide — Sazerac</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Data-driven testing for Jasmine, Mocha, and Jest">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Guide — Sazerac">
+        <meta property="og:description" content="Data-driven testing for Jasmine, Mocha, and Jest">
+        <meta property="og:image" content="https://sazeracjs.com/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Guide — Sazerac">
+        <meta name="twitter:description" content="Data-driven testing for Jasmine, Mocha, and Jest">
+        <meta name="twitter:image" content="https://sazeracjs.com/images/logo.png">
+
+        <link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon">
+
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Sazerac' rel='stylesheet' type='text/css'>
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/css/page.css">
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+
+        <script>window.PAGE_TYPE = "v0.2.2"</script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', 'sazeracjs.com');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <div class="title">
+  <span id="project_name">Sazerac</span>
+  <div class="nav-dropdown-container">
+  <a class="nav-link"><span id="version">v0.2.2</span></a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+      <ul>
+        
+          <li><a href="/v0.2.2/">v0.2.2</a></li>
+        
+          <li><a href="/v1.0/">v1.0</a></li>
+        
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>
+        </div>
+        <div id="header">
+  <div class="title">
+  <span id="project_name">Sazerac</span>
+  <div class="nav-dropdown-container">
+  <a class="nav-link"><span id="version">v0.2.2</span></a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li>
+      <ul>
+        
+          <li><a href="/v0.2.2/">v0.2.2</a></li>
+        
+          <li><a href="/v1.0/">v1.0</a></li>
+        
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>
+  <div id="header-right">
+    <ul id="links" class="links-list">
+    
+    <li>
+        <a href="https://github.com/mikec/sazerac">
+        
+            <i class="fa fa-github fa-lg"></i>
+        
+        
+            <span>mikec/sazerac</span>
+        
+        </a>
+    </li>
+    
+</ul>
+    <ul id="share-links" class="links-list">
+    <li class="share-text">Share:</li>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=Sazerac%20-%20Data-driven%20testing%20for%20Jasmine%2C%20Mocha%2C%20and%20Jest&url=http://sazeracjs.com">
+        <i class="fa fa-twitter fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=http%3A%2F%2Fsazeracjs.com">
+        <i class="fa fa-facebook fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://plus.google.com/share?url=http%3A%2F%2Fsazeracjs.com">
+        <i class="fa fa-google-plus fa-lg"></i>
+    </a>
+    </li>
+</ul>
+  </div>
+</div>
+
+
+        <div id="main" class="fix-sidebar">
+            <div class="sidebar">
+    <div class="list">
+        <ul class="menu-root">
+            
+                
+                <li>
+                    <a href="/v0.2.2/index.html" class="sidebar-link current">Guide</a>
+                </li>
+            
+                
+                <li>
+                    <a href="/v0.2.2/api.html" class="sidebar-link">API</a>
+                </li>
+            
+                
+                <li>
+                    <a href="/v0.2.2/examples.html" class="sidebar-link">Examples</a>
+                </li>
+            
+        </ul>
+    </div>
+    <ul id="links" class="links-list">
+    
+    <li>
+        <a href="https://github.com/mikec/sazerac">
+        
+            <i class="fa fa-github fa-lg"></i>
+        
+        
+            <span>mikec/sazerac</span>
+        
+        </a>
+    </li>
+    
+</ul>
+    <ul id="share-links" class="links-list">
+    <li class="share-text">Share:</li>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=Sazerac%20-%20Data-driven%20testing%20for%20Jasmine%2C%20Mocha%2C%20and%20Jest&url=http://sazeracjs.com">
+        <i class="fa fa-twitter fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=http%3A%2F%2Fsazeracjs.com">
+        <i class="fa fa-facebook fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://plus.google.com/share?url=http%3A%2F%2Fsazeracjs.com">
+        <i class="fa fa-google-plus fa-lg"></i>
+    </a>
+    </li>
+</ul>
+</div>
+
+<div class="content with-sidebar">
+    
+      <h1>Guide</h1>
+    
+    <h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>This module provides a simple and flexible way to create <a href="https://booker.codes/data-driven-tests-in-javascript-using-mocha/" target="_blank" rel="external">data-driven tests</a> in JavaScript. It works with <a href="https://mochajs.org/" target="_blank" rel="external">mocha</a>, <a href="https://jasmine.github.io/" target="_blank" rel="external">jasmine</a>, and <a href="https://facebook.github.io/jest/" target="_blank" rel="external">jest</a>.</p>
+<p>Check out <a href="http://github.com/mikec/sazerac-example" target="_blank" rel="external">sazerac-example</a> or read on.</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Install Sazerac as an npm module and save it to your <code>package.json</code> file as a development dependency:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">npm install sazerac --save-dev</div></pre></td></tr></table></figure>
+<p>Import the <code>test</code> and <code>given</code> helper functions into your project:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; test, given &#125; <span class="keyword">from</span> <span class="string">'sazerac'</span></div></pre></td></tr></table></figure>
+<h2 id="Why-Use-This"><a href="#Why-Use-This" class="headerlink" title="Why Use This?"></a>Why Use This?</h2><p>Let’s say you have a function <code>isPrime()</code>. When given a number, it returns <code>true</code> or <code>false</code> depending on whether the number is a prime number.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPrime</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">2</span>; i &lt; num; i++) &#123;</div><div class="line">    <span class="keyword">if</span>(num % i === <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> num &gt; <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>If you’re using a framework like <a href="https://jasmine.github.io/" target="_blank" rel="external">jasmine</a>, your tests might look something like this:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">describe(<span class="string">'isPrime()'</span>, () =&gt; &#123;</div><div class="line"></div><div class="line">  describe(<span class="string">'when given 2'</span>, () =&gt; &#123;</div><div class="line">    it(<span class="string">'should return true'</span>, () =&gt; &#123;</div><div class="line">      assert.isTrue(isPrime(<span class="number">2</span>))</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  describe(<span class="string">'when given 3'</span>, () =&gt; &#123;</div><div class="line">    it(<span class="string">'should return true'</span>, () =&gt; &#123;</div><div class="line">      assert.isTrue(isPrime(<span class="number">3</span>))</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  describe(<span class="string">'when given 4'</span>, () =&gt; &#123;</div><div class="line">    it(<span class="string">'should return false'</span>, () =&gt; &#123;</div><div class="line">      assert.isFalse(isPrime(<span class="number">4</span>))</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">// and more ...</span></div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>It’s a lot of code to write for only 3 test cases and such a basic function!</p>
+<p>The same tests can be defined with Sazerac as follows:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">test(isPrime, () =&gt; &#123;</div><div class="line">  given(<span class="number">2</span>).expect(<span class="literal">true</span>)</div><div class="line">  given(<span class="number">3</span>).expect(<span class="literal">true</span>)</div><div class="line">  given(<span class="number">4</span>).expect(<span class="literal">false</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Sazerac runs the <code>describe</code> and <code>it</code> functions needed for these test cases. It adds reporting messages in a consistent format based on the input and output parameters. For this example, the test report ends up looking like this:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">isPrime()</div><div class="line">  when given 2</div><div class="line">    ✓ should return true</div><div class="line">  when given 3</div><div class="line">    ✓ should return true</div><div class="line">  when given 4</div><div class="line">    ✓ should return false</div></pre></td></tr></table></figure>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <a href="https://github.com/mikec/sazerac-site/blob/master/src/v0.2.2/index.md" target="_blank">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+        </div>
+        <script src="/js/smooth-scroll.min.js"></script>
+
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>
