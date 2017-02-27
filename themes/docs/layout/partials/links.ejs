@@ -1,7 +1,7 @@
 <ul id="links" class="links-list">
     <% for(var i in site.data.links) { %>
     <li>
-        <a href="<%= site.data.links[i].href %>">
+        <a onclick="trackOutboundLink('<%= site.data.links[i].href %>'); return false;" href="<%= site.data.links[i].href %>">
         <% if (site.data.links[i].icon) { %>
             <i class="<%= site.data.links[i].icon %>"></i>
         <% } %>
