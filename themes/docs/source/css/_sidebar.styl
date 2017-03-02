@@ -57,6 +57,10 @@
     #links, #share-links
         display none
 
+#main.fix-sidebar
+    .sidebar
+        position fixed
+
 @media screen and (max-width: 900px)
     .sidebar
         position fixed
@@ -89,3 +93,59 @@
                 margin-left 0
         .list
             padding-bottom 40px
+    
+    body
+        -webkit-text-size-adjust none
+        font-size 14px
+
+    #header
+        display none
+    .nav-link
+        padding-bottom 1px
+        &:hover, &.current
+            border-bottom 2px solid $primary
+    #mobile-bar
+        display block
+    #main
+        padding 2em 1.4em 0
+    .highlight pre
+        padding 1.2em 1em
+    .content
+        &.with-sidebar
+            margin auto
+        h2, h3
+            &:before
+                content ''
+                display block
+                margin-top -1 * $mobile-heading-link-padding-top
+                height $mobile-heading-link-padding-top
+                visibility hidden
+    .footer
+        margin-left 0
+        text-align center
+
+@media screen and (min-width: 1590px)
+    #header
+        background-color rgba(255,255,255,.4)
+
+@media screen and (max-width: 1300px)
+    .content.with-sidebar
+        margin-left 290px
+    #ad
+        z-index 7
+        position relative
+        padding 0
+        bottom 0
+        right 0
+        float right
+        padding 0 0 20px 30px
+
+@media screen and (max-width: 560px)
+    #downloads
+        text-align center
+        margin-bottom 25px
+        .info
+            margin-top 5px
+            margin-left 0
+    iframe
+        margin: 0 !important

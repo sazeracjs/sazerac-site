@@ -3,168 +3,99 @@
 @import '_sidebar'
 
 $width = 900px
-$space = 50px
+$primaryColor = rgba(230, 112, 112, 0.95)
+$primaryColorFaded = rgba(230, 112, 112, 0.35)
 
-body
-    background-color darken($light, 10%)
+#header
+    position relative
 
-#project_name
-    span
-        font-size 1.2em
-    img
-        display none
-
-.sidebar
-    display none
-
-#mobile-bar
-    &.top
-        background-color transparent
-        box-shadow none
-        .logo
-            display none
+#header-right
+    position: absolute;
+    right: 180px;
 
 #hero
-    padding $space 40px
-    background-color #fff
-    .inner
-        max-width $width
-        margin 0 auto
-    .left, .right
-        display inline-block
-        vertical-align top
-    .left
-        width 39%
-    .right
-        width 61%
-    .hero-logo
-        width 215px
-        height 215px
-        float right
-        margin-right 60px
-    h1
-        font-weight 300
-        margin 0
-        font-size 3.2em
-    h2
-        font-family $logo-font
-        font-weight 500
-        font-size 2.4em
-        margin 0 0 10px
-        display none
-    .button
-        margin 1em 0
-        font-size 1.05em
-        font-weight 600
-        letter-spacing .1em
-        &:first-child
-            margin-right 1em
-    .social-buttons
-        list-style-type none
-        padding 0
-        li
-            display inline-block
-            vertical-align middle
-            margin-right 15px
-
-#highlights
-    background-color #fff
-    padding-bottom 70px
-    .inner
-        max-width $width
-        margin 0 auto
-        text-align center
-    .point
-        width 33%
-        display inline-block
-        vertical-align top
-        box-sizing border-box
-        padding 0 2em
-        h2
-            color $primary
-            font-size 1.5em
-            font-weight 400
-            margin 0
-            padding .5em 0
-        p
-            color $light
-
-#sponsors
     text-align center
-    padding 35px 40px 45px
-    background-color #f6f6f6
-    .inner
-        max-width 700px
-        margin 0px auto
-    h3
-        color #999
-        font-size .9em
-        margin 0 0 10px
-    a
-        margin 20px 15px 0
-        position relative
-    a, img
-        width 100px
-        display inline-block
-        vertical-align middle
-    img
-        transition all .3s ease
-        filter contrast(0%)
-        &:hover
-            filter none
-    a.vip
+    padding 20px 0
+    #logo    
+        margin 30px auto 50px auto
+        width 80px
+        opacity 0.8
         display block
-        margin 30px auto 15px
-        width 200px
-        img
-            width 200px
-    .become-sponsor
-        margin-top 40px
-        font-size .9em
-        font-weight 700
-        width auto
-        background-color transparent
+    #project_name
+        font-size 88px
+        display block
+    #subtitle
+        font-size 26px
+        margin 35px 0
+        display block
 
-#footer
-    padding $space 0
-    color #fff
+#actions
     text-align center
-    a
-        font-weight 700
-        color #fff
+    margin 10px
+
+.primary-btn,  .secondary-btn
+    font-weight bold
+    border-radius 30px
+    padding 10px 35px
+    text-transform uppercase
+    cursor pointer
+    letter-spacing .1em
+    font-size 1.2em
+    border 1px solid $primaryColor
+    margin 0 8px
+
+.primary-btn
+    background $primaryColor
+    color white
+
+.secondary-btn
+    color $primaryColor
+
+hr
+    margin-top 85px
+    border 1px solid $primaryColorFaded
+
+.tagline
+    text-align center
+    margin-top 80px
+    font-size 1.5em
+
+.highlight.homepage
+    width 320px
+    padding 0 75px 0 75px
+    font-size 1.4em
+    margin 70px auto 0 auto
+    .code pre
+        padding-bottom 0
+
+.footer
+    padding 80px 0
+    margin-top 110px
+    color white
+    background $primaryColor
+    text-align center
+    
 
 @media screen and (max-width: $width)
     body
         -webkit-text-size-adjust none
         font-size 14px
-    .sidebar
-        display block
-    #header
-        display none
-    #mobile-bar
-        display block
+
     #hero
-        padding $space 40px 30px
-        .hero-logo
-            float none
-            margin 30px 0 15px
-            width 140px
-            height 140px
-        .left, .right
-            text-align center
-            width 100%
-        h1
-            font-size 2em
-        h2
-            display block
-        .button
-            font-size .9em
-    #highlights
-        .point
-            display block
-            margin 0 auto
-            width 300px
-            padding 0 40px 30px
-            &:before
-                content "—"
-                color $primary
+        #project_name
+            font-size 58px
+        #subtitle
+            font-size 20px
+            margin 25px 0
+    .primary-btn, .secondary-btn
+        font-size .9em
+
+    .highlight.homepage
+        width 220px
+        padding 0 75px 0 45px
+        font-size 1.2em
+
+    body #mobile-bar .title
+        display none
+
+    

@@ -1,5 +1,15 @@
+<% var isIndex = page.path === 'index.html' %>
 <div class="title">
-  <img id="logo" src="/images/logo.svg" />
-  <span id="project_name"><%= config.title %></span>
-  <%- partial('partials/version_dropdown') %>
+  <% if (!isIndex) { %>
+    <a href="/" class="header-link">
+      <img id="logo" src="/images/logo.svg" />
+      <span id="project_name"><%= config.title %></span>
+    </a>
+    <%- partial('partials/version_dropdown') %>
+  <% } else { %>
+    <a href="/v<%= config.version %>" class="header-link">
+      <img id="logo" src="/images/logo.svg" />
+      <span>Docs</span>
+    </a>
+  <% } %>
 </div>

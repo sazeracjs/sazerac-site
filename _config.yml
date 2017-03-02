@@ -4,7 +4,7 @@
 
 # Site
 title: Sazerac
-subtitle:
+subtitle: "Data-driven testing for JavaScript"
 description: "Data-driven testing for Jasmine, Mocha, and Jest"
 author: Mike Calvanese
 email:
@@ -23,6 +23,10 @@ code_dir: downloads/code
 
 # Project
 version: 0.2.2
+project_repository_url: https://github.com/mikec/sazerac
+license: MIT
+license_url: https://opensource.org/licenses/MIT
+copyright_date: 2017
 
 # Directory
 source_dir: src
@@ -112,6 +116,3 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
-
-alias:
-  /index.html: v0.2.2/index.html

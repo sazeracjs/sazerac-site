@@ -1,0 +1,44 @@
+<%- partial('partials/sidebar', { type: page.type, index: page.index }) %>
+<div class="index">
+  <div id="hero">
+    <img id="logo" src="/images/logo.svg" />
+    <span id="project_name"><%= config.title %></span>
+    <div id="subtitle"><%= config.subtitle %></div>
+  </div>
+  <div id="actions">
+    <a class="primary-btn" href="/v<%= config.version %>">Get Started</a>
+    <a class="secondary-btn"
+       onclick="trackOutboundLink('<%= config.project_repository_url %>'); return false;"
+       href="<%= config.project_repository_url %>">
+       Github
+    </a>
+  </div>
+
+  <hr />
+
+  <div id="content">
+    <div class="tagline">
+      <b>Sazerac</b> helps you create simple, readable tests.<br/><br/>
+      It works with <b>Jasmine</b>, <b>Jest</b>, and <b>Mocha</b>.<br/><br/>
+      Here's an example:
+    </div>
+    <figure class="highlight homepage"><table><tbody><tr><td class="code">
+      <pre>
+        <div class="line">test(<span class="title">mySumFunction</span>, () <span class="keyword">=&gt;</span> {</div><div class="line">  given(<span class="number">1</span>, <span class="number">1</span>).expect(<span class="number">2</span>)</div><div class="line">  given(<span class="number">2</span>, <span class="number">3</span>).expect(<span class="number">5</span>)</div><div class="line">  given(<span class="number">9</span>, <span class="number">6</span>).expect(<span class="number">15</span>)</div><div class="line">})</div>
+      </pre></td></tr></tbody></table>
+    </figure>
+  </div>
+
+  <div class="footer">
+    <div>
+      Released under the 
+      <a
+       onclick="trackOutboundLink('<%= config.license_url %>'); return false;"
+       href="<%= config.license_url %>">
+       <%= config.license %> License
+      </a>
+    </div>
+    <div>Copyright © <%= config.copyright_date %> <%= config.author %></div>
+  </div>
+
+</div>

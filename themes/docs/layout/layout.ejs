@@ -1,3 +1,4 @@
+<% var isIndex = page.path === 'index.html' %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,7 +23,8 @@
         <link href='//fonts.googleapis.com/css?family=Dosis:500&text=<%= config.title %>' rel='stylesheet' type='text/css'>
 
         <!-- main page styles -->
-        <%- css('css/page') %>
+        <%- css(isIndex ? 'css/index' : 'css/page') %>
+        
         <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 
         <script>window.PAGE_TYPE = "<%- page.type %>"</script>
@@ -52,16 +54,23 @@
             ga('send', 'pageview');
         </script>
     </head>
-    <body class="docs">
+
+    <body class="<%- isIndex ? '' : 'docs' -%>">
+
         <div id="mobile-bar">
             <a class="menu-button"></a>
             <%- partial('partials/title') %>
         </div>
         <%- partial('partials/header') %>
 
-        <div id="main" class="fix-sidebar">
+        <% if (!isIndex) { %>
+            <div id="main" class="fix-sidebar">
+                <%- body %>
+            </div>
+        <% } else { %>
             <%- body %>
-        </div>
+        <% } %>
+
         <script src="/js/smooth-scroll.min.js"></script>
 
         <!-- main custom script for sidebars, version selects etc. -->        
