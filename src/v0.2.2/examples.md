@@ -6,4 +6,4 @@ order: 3
 
 # React Component Example
 
-stuff
+Check out [sazerac-example](http://github.com/mikec/sazerac-example)
