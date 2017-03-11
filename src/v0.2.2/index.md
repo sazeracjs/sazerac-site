@@ -102,7 +102,7 @@ Sazerac's `test()` and `given()` functions are the basic building blocks for cre
 
 ```js
 test(mySumFunction, () => {
-  // test cases defined here...
+  // test cases for mySumFunction defined here...
 })
 ```
 
