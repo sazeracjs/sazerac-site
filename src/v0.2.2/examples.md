@@ -4,6 +4,8 @@ type: v0.2.2
 order: 3
 ---
 
-# React Component Example
+Check out the [sazerac-example](http://github.com/mikec/sazerac-example) repo.
 
-Check out [sazerac-example](http://github.com/mikec/sazerac-example)
+These are copies of these [Redux examples](https://github.com/reactjs/redux/tree/master/examples) with tests re-written in Sazerac.
+
+Please send a pull request with your examples!
