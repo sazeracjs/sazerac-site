@@ -22,7 +22,7 @@ category_dir: categories
 code_dir: downloads/code
 
 # Project
-version: 0.2.2
+version: 0.3.0
 project_repository_url: https://github.com/mikec/sazerac
 license: MIT
 license_url: https://opensource.org/licenses/MIT
