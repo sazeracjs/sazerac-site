@@ -263,6 +263,29 @@ addTwoNumbers()
 ```
 
 
+Setup and Teardown
+------------------
+
+The `before` and `after` functions can be used to run setup and teardown code for a test case, or a collection of test cases. This is equivalent to running `beforeEach` and `afterEach` in Jasmine, Mocha, or Jest.
+
+Mocking function behaviors is a common use case for these:
+
+```js
+import sinon from 'sinon'
+
+const myStubFn = sinon.stub()
+
+test(myStubFn, () => {
+  given()
+    .before(() => myStubFn.returns(42))
+    .after(() => myStubFn.resetBehavior())
+    .expect(42)
+
+  given().expect(undefined)
+})
+```
+
+
 Grouping Multiple Cases
 -----------------------
 
