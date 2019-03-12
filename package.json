@@ -8,6 +8,12 @@
   "scripts": {
     "debug": "hexo generate"
   },
+  "scripts": {
+    "start": "hexo server",
+    "prebuild": "rm -rf public db.json",
+    "build": "hexo generate",
+    "deploy": "npm run build && hexo deploy"
+  },
   "dependencies": {
     "hexo": "^3.2.2",
     "hexo-deployer-git": "0.1.0",
