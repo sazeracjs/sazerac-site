@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta name="generator" content="Hexo 3.8.0">
+        <title>API — Sazerac</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Data-driven testing for Jasmine, Mocha, and Jest">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="API — Sazerac">
+        <meta property="og:description" content="Data-driven testing for Jasmine, Mocha, and Jest">
+        <meta property="og:image" content="https://sazeracjs.com/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="API — Sazerac">
+        <meta name="twitter:description" content="Data-driven testing for Jasmine, Mocha, and Jest">
+        <meta name="twitter:image" content="https://sazeracjs.com/images/logo.png">
+
+        <link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500&text=Sazerac" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/css/page.css">
+        
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+
+        <script>window.PAGE_TYPE = "v0.2.2"</script>
+
+        <!-- ga -->
+        <script>
+
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            /**
+            * Function that tracks a click on an outbound link in Analytics.
+            * This function takes a valid URL string as an argument, and uses that URL string
+            * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+            * using 'navigator.sendBeacon' in browser that support it.
+            */
+            var trackOutboundLink = function(url) {
+                ga('send', 'event', 'outbound', 'click', url, {
+                    'transport': 'beacon',
+                    'hitCallback': function(){document.location = url;}
+                });
+            }
+
+            ga('create', 'UA-92756909-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+
+    <body class="docs">
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            
+<div class="title">
+  <a href="/" class="header-link">
+    <img id="logo" src="/images/logo.svg">
+    <span id="project_name">Sazerac</span>
+  </a>
+  
+    <div class="version-dropdown">
+  
+  
+    <div class="nav-dropdown-container">
+      <a class="nav-link"><span id="version">v0.2.2</span></a><span class="arrow"></span>
+      <ul class="nav-dropdown">
+        <li>
+          <ul>
+            
+              <li><a href="/v0.2.2/">v0.2.2</a></li>
+            
+              <li><a href="/v0.3.0/">v0.3.0</a></li>
+            
+              <li><a href="/v0.4.1/">v0.4.1</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  
+</div>
+  
+</div>
+        </div>
+        <div id="header">
+  
+<div class="title">
+  <a href="/" class="header-link">
+    <img id="logo" src="/images/logo.svg">
+    <span id="project_name">Sazerac</span>
+  </a>
+  
+    <div class="version-dropdown">
+  
+  
+    <div class="nav-dropdown-container">
+      <a class="nav-link"><span id="version">v0.2.2</span></a><span class="arrow"></span>
+      <ul class="nav-dropdown">
+        <li>
+          <ul>
+            
+              <li><a href="/v0.2.2/">v0.2.2</a></li>
+            
+              <li><a href="/v0.3.0/">v0.3.0</a></li>
+            
+              <li><a href="/v0.4.1/">v0.4.1</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  
+</div>
+  
+</div>
+  <div id="header-right">
+    <ul id="links" class="links-list">
+    
+    <li>
+        <a onclick="trackOutboundLink('https://github.com/mikec/sazerac'); return false;" href="https://github.com/mikec/sazerac">
+        
+            <i class="fa fa-github fa-lg"></i>
+        
+        
+            <span>mikec/sazerac</span>
+        
+        </a>
+    </li>
+    
+</ul>
+    <ul id="share-links" class="links-list">
+    <li class="share-text">Share:</li>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=Sazerac%20-%20Data-driven%20testing%20for%20Jasmine%2C%20Mocha%2C%20and%20Jest&url=http://sazeracjs.com">
+        <i class="fa fa-twitter fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=http%3A%2F%2Fsazeracjs.com">
+        <i class="fa fa-facebook fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://plus.google.com/share?url=http%3A%2F%2Fsazeracjs.com">
+        <i class="fa fa-google-plus fa-lg"></i>
+    </a>
+    </li>
+</ul>
+  </div>
+</div>
+
+
+        
+            <div id="main" class="fix-sidebar">
+                <div class="sidebar">
+    <div class="list">
+        <ul class="menu-root">
+            
+                
+                <li>
+                    <a href="/v0.2.2/index.html" class="sidebar-link">Guide</a>
+                </li>
+            
+                
+                <li>
+                    <a href="/v0.2.2/api.html" class="sidebar-link current">API</a>
+                </li>
+            
+                
+                <li>
+                    <a href="/v0.2.2/examples.html" class="sidebar-link">Examples</a>
+                </li>
+            
+        </ul>
+    </div>
+    <ul id="links" class="links-list">
+    
+    <li>
+        <a onclick="trackOutboundLink('https://github.com/mikec/sazerac'); return false;" href="https://github.com/mikec/sazerac">
+        
+            <i class="fa fa-github fa-lg"></i>
+        
+        
+            <span>mikec/sazerac</span>
+        
+        </a>
+    </li>
+    
+</ul>
+    <ul id="share-links" class="links-list">
+    <li class="share-text">Share:</li>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=Sazerac%20-%20Data-driven%20testing%20for%20Jasmine%2C%20Mocha%2C%20and%20Jest&url=http://sazeracjs.com">
+        <i class="fa fa-twitter fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=http%3A%2F%2Fsazeracjs.com">
+        <i class="fa fa-facebook fa-lg"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://plus.google.com/share?url=http%3A%2F%2Fsazeracjs.com">
+        <i class="fa fa-google-plus fa-lg"></i>
+    </a>
+    </li>
+</ul>
+</div>
+
+<div class="content with-sidebar">
+    
+      <h1>API</h1>
+    
+    <h2 id="Helpers"><a href="#Helpers" class="headerlink" title="Helpers"></a>Helpers</h2><p>The <code>sazerac</code> module exports 3 helper functions:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; test, given, forCases &#125; <span class="keyword">from</span> <span class="string">'sazerac'</span></span><br></pre></td></tr></table></figure>
+<h3 id="test-testFn-definerFn"><a href="#test-testFn-definerFn" class="headerlink" title="test(testFn, definerFn)"></a>test(testFn, definerFn)</h3><p>Defines test cases for a function</p>
+<ul>
+<li><p>Arguments:</p>
+<ul>
+<li><code>{Function} testFn</code> - a function to test</li>
+<li><code>{Function} definerFn</code> - a function that defines test cases for <code>testFn</code></li>
+</ul>
+</li>
+<li><p>Example:</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  <span class="comment">// test cases for mySumFunction defined here...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="given-…args"><a href="#given-…args" class="headerlink" title="given([…args])"></a>given([…args])</h3><p>Defines the functional arguments for a test case</p>
+<ul>
+<li><p>Arguments:</p>
+<ul>
+<li><code>{...object} args</code> - arguments that will be passed to the function being tested</li>
+</ul>
+</li>
+<li><p>Returns:</p>
+<ul>
+<li><code>{TestCase}</code></li>
+</ul>
+</li>
+<li><p>Example:</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">var</span> testCase = given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="forCases-…testCases"><a href="#forCases-…testCases" class="headerlink" title="forCases(…testCases)"></a>forCases(…testCases)</h3><p>Groups multiple test case objects into a collection</p>
+<ul>
+<li><p>Arguments:</p>
+<ul>
+<li><code>{...TestCase | Array&lt;TestCase&gt;} testCases</code></li>
+</ul>
+</li>
+<li><p>Returns:</p>
+<ul>
+<li><code>{TestCaseCollection}</code></li>
+</ul>
+</li>
+<li><p>Example:</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(isPrime, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">var</span> primeTestCases = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>].map(given)</span><br><span class="line">  <span class="keyword">var</span> testCaseCollection = forCases(primeTestCases)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="TestCase-TestCaseCollection"><a href="#TestCase-TestCaseCollection" class="headerlink" title="TestCase | TestCaseCollection"></a>TestCase | TestCaseCollection</h2><p>The <code>TestCase</code> and <code>TestCaseCollection</code> objects have an identical API:</p>
+<h3 id="expect-value-message"><a href="#expect-value-message" class="headerlink" title="expect(value, [message])"></a>expect(value, [message])</h3><p>Defines the expected return value for the test case. Uses <a href="http://chaijs.com" target="_blank" rel="noopener">chai</a> <code>assert.deepEqual()</code> to assert that the expected return value equals the actual return value.</p>
+<ul>
+<li><p>Arguments:</p>
+<ul>
+<li><code>{object} value</code> - expected return value</li>
+<li><code>{string} message</code> - describes the test case expectation</li>
+</ul>
+</li>
+<li><p>Returns:</p>
+<ul>
+<li><code>{TestCase | TestCaseCollection}</code></li>
+</ul>
+</li>
+<li><p>Example:</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>).expect(<span class="number">6</span>)</span><br><span class="line">  given(<span class="number">4</span>, <span class="number">5</span>).expect(<span class="number">9</span>, <span class="string">'should equal 9'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="describe-message"><a href="#describe-message" class="headerlink" title="describe(message)"></a>describe(message)</h3><p>Defines a describe message for the test case.</p>
+<ul>
+<li><p>Arguments:</p>
+<ul>
+<li><code>{string} message</code></li>
+</ul>
+</li>
+<li><p>Returns:</p>
+<ul>
+<li><code>{TestCase | TestCaseCollection}</code></li>
+</ul>
+</li>
+<li><p>Example:</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .expect(<span class="number">6</span>)</span><br><span class="line">    .describe(<span class="string">'sum of 1, 2, and 3'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="should-message"><a href="#should-message" class="headerlink" title="should(message)"></a>should(message)</h3><p>Defines a message to describe the test case assertion. This message is passed to the <code>it</code> function when the test is executed.</p>
+<ul>
+<li><p>Arguments:</p>
+<ul>
+<li><code>{string} message</code></li>
+</ul>
+</li>
+<li><p>Returns:</p>
+<ul>
+<li><code>{TestCase | TestCaseCollection}</code></li>
+</ul>
+</li>
+<li><p>Example:</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .expect(<span class="number">6</span>)</span><br><span class="line">    .should(<span class="string">'should equal 6'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="assert-message-assertFn"><a href="#assert-message-assertFn" class="headerlink" title="assert(message, assertFn)"></a>assert(message, assertFn)</h3><p>Defines a custom assertion for the test case</p>
+<ul>
+<li><p>Arguments:</p>
+<ul>
+<li><code>{string} message</code> - describes the assertion</li>
+<li><code>{Function} assertFn</code> - function for defining the assertion. Receives the actual return value of the function being tested as its only argument.</li>
+</ul>
+</li>
+<li><p>Returns:</p>
+<ul>
+<li><code>{TestCase | TestCaseCollection}</code></li>
+</ul>
+</li>
+<li><p>Example:</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .assert(</span><br><span class="line">      <span class="string">'should set the value of the sum property to 6'</span>,</span><br><span class="line">      (actualReturnValue) =&gt; &#123;</span><br><span class="line">        <span class="comment">// do anything with actualReturnValue here,</span></span><br><span class="line">        <span class="comment">// for example:</span></span><br><span class="line">        assert.equal(actualReturnValue.sum, <span class="number">6</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    )</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <a href="https://github.com/mikec/sazerac-site/blob/master/src/v0.2.2/api.md" target="_blank">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+            </div>
+        
+
+        <script src="/js/smooth-scroll.min.js"></script>
+
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>
