@@ -1,9 +1,4 @@
-all: update deploy
-
-deploy:
-	rm -rf public db.json
-	hexo generate
-	hexo deploy
+all: update
 
 update:
 	cd ../vue && \
