@@ -6,9 +6,6 @@
     "version": "3.2.2"
   },
   "scripts": {
-    "debug": "hexo generate"
-  },
-  "scripts": {
     "start": "hexo server",
     "prebuild": "rm -rf public db.json",
     "build": "hexo generate",
