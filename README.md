@@ -1,4 +1,4 @@
-# sazeracjs.com
+# sazerac.js.org
 
 This site is built with [hexo][]. Site content is written in Markdown format
 located in `src`. Pull requests welcome!
