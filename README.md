@@ -20,5 +20,5 @@ $ npm start
 
 ```console
 $ npm ci
-$ npm start
+$ npm run deploy
 ```
