@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><meta name="generator" content="Hexo 3.8.0">
         <title>API — Sazerac</title>
         <meta charset="utf-8">
         <meta name="description" content="Data-driven testing for Jasmine, Mocha, and Jest">
@@ -19,8 +19,8 @@
 
         <link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon">
 
-        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
-        <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Sazerac' rel='stylesheet' type='text/css'>
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Dosis:500&text=Sazerac" rel="stylesheet" type="text/css">
 
         <!-- main page styles -->
         <link rel="stylesheet" href="/css/page.css">
@@ -61,7 +61,7 @@
             
 <div class="title">
   <a href="/" class="header-link">
-    <img id="logo" src="/images/logo.svg" />
+    <img id="logo" src="/images/logo.svg">
     <span id="project_name">Sazerac</span>
   </a>
   
@@ -93,7 +93,7 @@
   
 <div class="title">
   <a href="/" class="header-link">
-    <img id="logo" src="/images/logo.svg" />
+    <img id="logo" src="/images/logo.svg">
     <span id="project_name">Sazerac</span>
   </a>
   
@@ -219,7 +219,7 @@
       <h1>API</h1>
     
     <h2 id="Helpers"><a href="#Helpers" class="headerlink" title="Helpers"></a>Helpers</h2><p>The <code>sazerac</code> module exports 3 helper functions:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; test, given, forCases &#125; <span class="keyword">from</span> <span class="string">'sazerac'</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; test, given, forCases &#125; <span class="keyword">from</span> <span class="string">'sazerac'</span></span><br></pre></td></tr></table></figure>
 <h3 id="test-testFn-definerFn"><a href="#test-testFn-definerFn" class="headerlink" title="test(testFn, definerFn)"></a>test(testFn, definerFn)</h3><p>Defines test cases for a function</p>
 <ul>
 <li><p>Arguments:</p>
@@ -231,7 +231,7 @@
 <li><p>Example:</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">test(mySumFunction, () =&gt; &#123;</div><div class="line">  <span class="comment">// test cases for mySumFunction defined here...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  <span class="comment">// test cases for mySumFunction defined here...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="given-…args"><a href="#given-…args" class="headerlink" title="given([…args])"></a>given([…args])</h3><p>Defines the functional arguments for a test case</p>
 <ul>
 <li><p>Arguments:</p>
@@ -247,7 +247,7 @@
 <li><p>Example:</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">test(mySumFunction, () =&gt; &#123;</div><div class="line">  <span class="keyword">var</span> testCase = given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">var</span> testCase = given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="forCases-…testCases"><a href="#forCases-…testCases" class="headerlink" title="forCases(…testCases)"></a>forCases(…testCases)</h3><p>Groups multiple test case objects into a collection</p>
 <ul>
 <li><p>Arguments:</p>
@@ -263,9 +263,9 @@
 <li><p>Example:</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">test(isPrime, () =&gt; &#123;</div><div class="line">  <span class="keyword">var</span> primeTestCases = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>].map(given)</div><div class="line">  <span class="keyword">var</span> testCaseCollection = forCases(primeTestCases)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(isPrime, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">var</span> primeTestCases = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>].map(given)</span><br><span class="line">  <span class="keyword">var</span> testCaseCollection = forCases(primeTestCases)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="TestCase-TestCaseCollection"><a href="#TestCase-TestCaseCollection" class="headerlink" title="TestCase | TestCaseCollection"></a>TestCase | TestCaseCollection</h2><p>The <code>TestCase</code> and <code>TestCaseCollection</code> objects have an identical API:</p>
-<h3 id="expect-value-message"><a href="#expect-value-message" class="headerlink" title="expect(value, [message])"></a>expect(value, [message])</h3><p>Defines the expected return value for the test case. Uses <a href="http://chaijs.com" target="_blank" rel="external">chai</a> <code>assert.deepEqual()</code> to assert that the expected return value equals the actual return value.</p>
+<h3 id="expect-value-message"><a href="#expect-value-message" class="headerlink" title="expect(value, [message])"></a>expect(value, [message])</h3><p>Defines the expected return value for the test case. Uses <a href="http://chaijs.com" target="_blank" rel="noopener">chai</a> <code>assert.deepEqual()</code> to assert that the expected return value equals the actual return value.</p>
 <ul>
 <li><p>Arguments:</p>
 <ul>
@@ -281,7 +281,7 @@
 <li><p>Example:</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">test(mySumFunction, () =&gt; &#123;</div><div class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>).expect(<span class="number">6</span>)</div><div class="line">  given(<span class="number">4</span>, <span class="number">5</span>).expect(<span class="number">9</span>, <span class="string">'should equal 9'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>).expect(<span class="number">6</span>)</span><br><span class="line">  given(<span class="number">4</span>, <span class="number">5</span>).expect(<span class="number">9</span>, <span class="string">'should equal 9'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="describe-message"><a href="#describe-message" class="headerlink" title="describe(message)"></a>describe(message)</h3><p>Defines a describe message for the test case.</p>
 <ul>
 <li><p>Arguments:</p>
@@ -297,7 +297,7 @@
 <li><p>Example:</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">test(mySumFunction, () =&gt; &#123;</div><div class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</div><div class="line">    .expect(<span class="number">6</span>)</div><div class="line">    .describe(<span class="string">'sum of 1, 2, and 3'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .expect(<span class="number">6</span>)</span><br><span class="line">    .describe(<span class="string">'sum of 1, 2, and 3'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="should-message"><a href="#should-message" class="headerlink" title="should(message)"></a>should(message)</h3><p>Defines a message to describe the test case assertion. This message is passed to the <code>it</code> function when the test is executed.</p>
 <ul>
 <li><p>Arguments:</p>
@@ -313,7 +313,7 @@
 <li><p>Example:</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">test(mySumFunction, () =&gt; &#123;</div><div class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</div><div class="line">    .expect(<span class="number">6</span>)</div><div class="line">    .should(<span class="string">'should equal 6'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .expect(<span class="number">6</span>)</span><br><span class="line">    .should(<span class="string">'should equal 6'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="assert-message-assertFn"><a href="#assert-message-assertFn" class="headerlink" title="assert(message, assertFn)"></a>assert(message, assertFn)</h3><p>Defines a custom assertion for the test case</p>
 <ul>
 <li><p>Arguments:</p>
@@ -330,7 +330,7 @@
 <li><p>Example:</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">test(mySumFunction, () =&gt; &#123;</div><div class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</div><div class="line">    .assert(</div><div class="line">      <span class="string">'should set the value of the sum property to 6'</span>,</div><div class="line">      (actualReturnValue) =&gt; &#123;</div><div class="line">        <span class="comment">// do anything with actualReturnValue here,</span></div><div class="line">        <span class="comment">// for example:</span></div><div class="line">        assert.equal(actualReturnValue.sum, <span class="number">6</span>)</div><div class="line">      &#125;</div><div class="line">    )</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .assert(</span><br><span class="line">      <span class="string">'should set the value of the sum property to 6'</span>,</span><br><span class="line">      (actualReturnValue) =&gt; &#123;</span><br><span class="line">        <span class="comment">// do anything with actualReturnValue here,</span></span><br><span class="line">        <span class="comment">// for example:</span></span><br><span class="line">        assert.equal(actualReturnValue.sum, <span class="number">6</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    )</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
     
     <div class="footer">
