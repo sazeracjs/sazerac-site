@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
+    <head><meta name="generator" content="Hexo 3.9.0">
         <title>API — Sazerac</title>
         <meta charset="utf-8">
         <meta name="description" content="Data-driven testing for Jasmine, Mocha, and Jest">
@@ -56,6 +56,7 @@
     </head>
 
     <body class="docs">
+
         <div id="mobile-bar">
             <a class="menu-button"></a>
             
@@ -220,6 +221,7 @@
     
     <h2 id="Helpers"><a href="#Helpers" class="headerlink" title="Helpers"></a>Helpers</h2><p>The <code>sazerac</code> module exports 3 helper functions:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; test, given, forCases &#125; <span class="keyword">from</span> <span class="string">'sazerac'</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="test-testFn-definerFn"><a href="#test-testFn-definerFn" class="headerlink" title="test(testFn, definerFn)"></a>test(testFn, definerFn)</h3><p>Defines test cases for a function</p>
 <ul>
 <li><p>Arguments:</p>
@@ -232,6 +234,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  <span class="comment">// test cases for mySumFunction defined here...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="given-…args"><a href="#given-…args" class="headerlink" title="given([…args])"></a>given([…args])</h3><p>Defines the functional arguments for a test case</p>
 <ul>
 <li><p>Arguments:</p>
@@ -248,6 +251,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">var</span> testCase = given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="forCases-…testCases"><a href="#forCases-…testCases" class="headerlink" title="forCases(…testCases)"></a>forCases(…testCases)</h3><p>Groups multiple test case objects into a collection</p>
 <ul>
 <li><p>Arguments:</p>
@@ -264,6 +268,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(isPrime, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">var</span> primeTestCases = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>].map(given)</span><br><span class="line">  <span class="keyword">var</span> testCaseCollection = forCases(primeTestCases)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h2 id="TestCase-TestCaseCollection"><a href="#TestCase-TestCaseCollection" class="headerlink" title="TestCase | TestCaseCollection"></a>TestCase | TestCaseCollection</h2><p>The <code>TestCase</code> and <code>TestCaseCollection</code> objects have an identical API:</p>
 <h3 id="expect-value-message"><a href="#expect-value-message" class="headerlink" title="expect(value, [message])"></a>expect(value, [message])</h3><p>Defines the expected return value for the test case. Uses <a href="http://chaijs.com" target="_blank" rel="noopener">chai</a> <code>assert.deepEqual()</code> to assert that the expected return value equals the actual return value.</p>
 <ul>
@@ -282,6 +287,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>).expect(<span class="number">6</span>)</span><br><span class="line">  given(<span class="number">4</span>, <span class="number">5</span>).expect(<span class="number">9</span>, <span class="string">'should equal 9'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="describe-message"><a href="#describe-message" class="headerlink" title="describe(message)"></a>describe(message)</h3><p>Defines a describe message for the test case.</p>
 <ul>
 <li><p>Arguments:</p>
@@ -298,6 +304,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .expect(<span class="number">6</span>)</span><br><span class="line">    .describe(<span class="string">'sum of 1, 2, and 3'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="should-message"><a href="#should-message" class="headerlink" title="should(message)"></a>should(message)</h3><p>Defines a message to describe the test case assertion. This message is passed to the <code>it</code> function when the test is executed.</p>
 <ul>
 <li><p>Arguments:</p>
@@ -314,6 +321,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .expect(<span class="number">6</span>)</span><br><span class="line">    .should(<span class="string">'should equal 6'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="assert-message-assertFn"><a href="#assert-message-assertFn" class="headerlink" title="assert(message, assertFn)"></a>assert(message, assertFn)</h3><p>Defines a custom assertion for the test case</p>
 <ul>
 <li><p>Arguments:</p>
@@ -331,6 +339,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">test(mySumFunction, () =&gt; &#123;</span><br><span class="line">  given(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    .assert(</span><br><span class="line">      <span class="string">'should set the value of the sum property to 6'</span>,</span><br><span class="line">      (actualReturnValue) =&gt; &#123;</span><br><span class="line">        <span class="comment">// do anything with actualReturnValue here,</span></span><br><span class="line">        <span class="comment">// for example:</span></span><br><span class="line">        assert.equal(actualReturnValue.sum, <span class="number">6</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    )</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="before-beforeFn"><a href="#before-beforeFn" class="headerlink" title="before(beforeFn)"></a>before(beforeFn)</h3><p>Adds a function to run before a test case is executed</p>
 <ul>
 <li><p>Arguments:</p>
@@ -347,6 +356,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sinon <span class="keyword">from</span> <span class="string">'sinon'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myStubFn = sinon.stub()</span><br><span class="line"></span><br><span class="line">test(myStubFn, () =&gt; &#123;</span><br><span class="line">  given()</span><br><span class="line">    .before(<span class="function"><span class="params">()</span> =&gt;</span> myStubFn.returns(<span class="number">42</span>))</span><br><span class="line">    .expect(<span class="number">42</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="after-afterFn"><a href="#after-afterFn" class="headerlink" title="after(afterFn)"></a>after(afterFn)</h3><p>Adds a function to run after a test case is executed</p>
 <ul>
 <li><p>Arguments:</p>
@@ -363,6 +373,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sinon <span class="keyword">from</span> <span class="string">'sinon'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myStubFn = sinon.stub()</span><br><span class="line"></span><br><span class="line">test(myStubFn, () =&gt; &#123;</span><br><span class="line">  given()</span><br><span class="line">    .before(<span class="function"><span class="params">()</span> =&gt;</span> myStubFn.returns(<span class="number">42</span>))</span><br><span class="line">    .after(<span class="function"><span class="params">()</span> =&gt;</span> myStubFn.resetBehavior())</span><br><span class="line">    .expect(<span class="number">42</span>)</span><br><span class="line"></span><br><span class="line">  given().expect(<span class="literal">undefined</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 
     
     <div class="footer">
