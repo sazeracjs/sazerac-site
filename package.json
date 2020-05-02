@@ -15,7 +15,7 @@
     "hexo": "^3.9.0",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-alias": "git+https://github.com/chrisvfritz/vuejs.org-hexo-generator-alias.git",
-    "hexo-generator-archive": "^0.1.4",
+    "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^2.2.0",
     "hexo-generator-index": "^1.0.0",
