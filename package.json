@@ -12,7 +12,7 @@
     "deploy": "npm run build && hexo deploy"
   },
   "dependencies": {
-    "hexo": "^3.9.0",
+    "hexo": "^5.3.0",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-alias": "git+https://github.com/chrisvfritz/vuejs.org-hexo-generator-alias.git",
     "hexo-generator-archive": "^1.0.0",
